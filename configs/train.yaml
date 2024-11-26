@@ -1,0 +1,48 @@
+pretrained_model_path: "Four/train_2024-11-25T15-27-10/validated-6000"
+
+output_dir: "naT"
+
+train_data:
+  num_frames: 32
+
+  frame_step: 1
+
+  width: 256
+  height: 256
+
+  init_training: False
+
+  batch_size_per_gpu: 8
+
+  learning_rate: 0.00003
+
+  min_videos: 400
+
+  max_videos: 600
+  
+sample_data:
+  guidance_scale: 20
+
+  num_frames: 48
+
+  width: 256
+  height: 256
+
+  fps: 16
+
+  num_inference_steps: 35
+
+validation_data:
+  num_f1rames: 32
+
+  frame_step: 1
+
+  batch_size_per_gpu: 8
+
+  save_anyway: True
+
+sample_steps: 20
+
+validation_steps: 500
+
+gradient_checkpointing: True
